@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <fragment
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/map_options_ll"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <LinearLayout
+        android:id="@+id/map_options_ll"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/searchbar_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:visibility="gone" >
+
+            <SeekBar
+                android:id="@+id/radius_seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/radius_tv"
+                android:max="1000"
+                android:progress="100" />
+
+            <TextView
+                android:id="@+id/radius_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:maxLength="4"
+                android:text="1234" />
+        </RelativeLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/search_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_box"
+            android:drawableLeft="@drawable/search_glass"
+            android:ellipsize="end"
+            android:hint="@string/type_location_address"
+            android:imeOptions="actionSearch"
+            android:inputType="text|textCapWords"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/search_location_ib"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu_search_location" />
+
+            <ImageButton
+                android:id="@+id/set_radius_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/btn_default_normal_holo_dark"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu_radius" />
+
+            <ImageButton
+                android:id="@+id/add_new_location_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/btn_default_normal_holo_dark"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu_add_location" />
+
+            <ImageButton
+                android:id="@+id/remove_location_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/btn_default_normal_holo_dark"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu_remove_location" />
+
+            <ImageButton
+                android:id="@+id/mode_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/btn_default_normal_holo_dark"
+                android:onClick="onChangeModeView"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu_map_layers" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_map"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

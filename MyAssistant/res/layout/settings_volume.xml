@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<!-- Seekbar Volume: http://programmerguru.com/android-tutorial/android-seekbar-example/ -->
+<!-- http://examples.javacodegeeks.com/android/core/widget/seekbar/android-seekbar-example/ -->
+    <RelativeLayout
+        android:id="@+id/ringtone_volume"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background" >
+
+        <TextView
+            android:id="@+id/ringtone_volume_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/ringtone"
+            android:textColor="#000"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/ringtone_volume_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/ringtone_volume_icon_low"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ringtone_volume_title"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/icon_edit_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/volume_low" />
+
+        <SeekBar
+            android:id="@+id/seekbar_ringtone_volume"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ringtone_volume_title"
+            android:layout_toLeftOf="@+id/ringtone_volume_icon_full"
+            android:layout_toRightOf="@+id/ringtone_volume_icon_low"
+            android:max="7"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <ImageView
+            android:id="@+id/ringtone_volume_icon_full"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ringtone_volume_title"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/icon_edit_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/volume_high" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_alignBaseline="@+id/checkbox_ringtone_vibrate"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/checkbox_ringtone_vibrate"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:text="@string/vibrate" />
+
+        <CheckBox
+            android:id="@+id/checkbox_ringtone_vibrate"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ringtone_volume_icon_low"
+            android:button="@drawable/btn_check_holo_light"
+            android:checked="true"
+            android:paddingRight="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background" >
+
+        <TextView
+            android:id="@+id/notification_volume_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/notification"
+            android:textColor="#000"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/notification_volume_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/notification_volume_icon_low"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/notification_volume_title"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/icon_edit_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/volume_low" />
+
+        <SeekBar
+            android:id="@+id/seekbar_notification_volume"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notification_volume_title"
+            android:layout_toLeftOf="@+id/notification_volume_icon_high"
+            android:layout_toRightOf="@+id/notification_volume_icon_low"
+            android:max="7"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <ImageView
+            android:id="@+id/notification_volume_icon_high"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/notification_volume_title"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/icon_edit_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/volume_high" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_alignBaseline="@+id/checkbox_notification_vibrate"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/checkbox_notification_vibrate"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:text="@string/vibrate" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_vibrate"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/notification_volume_icon_low"
+            android:button="@drawable/btn_check_holo_light"
+            android:checked="true"
+            android:paddingRight="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>

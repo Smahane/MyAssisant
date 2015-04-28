@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="situations">Situations</string>
+    <string name="toggle_on">On</string>
+    <string name="toggle_off">Off</string>
+    <string name="defaults">Defaults</string>
+    <string name="add_situation">Add Situation</string>
+
+    <!-- EDIT ACTIVITY -->
+    <string name="untitled">write situation\'s name here</string>
+    <string name="conditions">Conditions</string>
+    <string name="no_conditions">No Conditions</string>
+    <string name="add_condition">Add Condition</string>
+    <string name="settings">Settings</string>
+    <string name="no_settings">No Settings</string>
+    <string name="add_setting">Add Setting</string>
+    <string name="unknown"> [ Unknown ] </string>
+    <string name="silent">Silent</string>
+
+    <!-- SETTINGS ACTIVITY -->
+    <string name="default_radius">Default radius</string>
+    <string name="unit_radius">Radius unit</string>
+    <string name="meters">meters</string>
+    <string name="feets">feets</string>
+    <string name="location_check_freq">Location check frequency</string>
+    <string name="distance">Distance</string>
+    <string name="minutes">minutes</string>
+    <string name="restore_default">Restore default settings</string>
+    <string name="location_hint_freq">(the time should be more than 3 min so battery not to drain too fast)</string>
+    <string name="show_volume_chenges">Display when ringtone volume changes</string>
+
+    <!-- CUSTOM DIALOG BOXES -->
+    <string name="contact">Contact</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
+    <string name="bluetooth">Bluetooth®</string>
+    <string name="brightness">Brightness</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="screen_timeout">Screen Timeout</string>
+    <string name="volume">Volume</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="no_bluetooth">The device doesn\'t support bluetooth!</string>
+
+    <string-array name="timeout_period">
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+
+    <string name="select_map_type">Choose one of the map types</string>
+
+    <string-array name="map_types_array">
+        <item>Normal</item>
+        <item>Satellite</item>
+        <item>Hybrid</item>
+        <item>Terrain</item>
+    </string-array>
+
+    <!-- LAYOUTS FOR CONDITIONS -->
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="repeat">Repeat</string>
+    <string name="horizontal">Landscape</string>
+    <string name="vertical">Portrait</string>
+    <string name="below">Below</string>
+    <string name="above">Above</string>
+    <string name="type_location_address">Type location address</string>
+    <string name="map">Map</string>
+    <string name="map_type">Map Type</string>
+    <string name="find">Find!</string>
+    <string name="radius_hint">radius</string>
+    <string name="set">Set radius</string>
+    <string name="time_not_correct">Starting time have to be smaller than ending time!</string>
+    <string name="select_marker_to_delete">Select the marker which you want to remove</string>
+
+    <!-- LAYOUTS FOR SETTINGS -->
+    <string name="vibrate">Vibrate</string>
+    <string name="notification">Notification/Messaging</string>
+    <string name="auto">Automatic brightness</string>
+
+    <!-- DIALOG BOXES -->
+    <string name="confirm_remove">Confirm Remove</string>
+    <string name="remove">Remove</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="sure_asking">Are you sure you want to remove the situation</string>
+    <string name="no_undone">Removing cannot be undone.</string>
+    <string name="search_current_location">Determining current location</string>
+    <string name="no_contact_choosen">Tap here to choose contact!</string>
+    <string name="no_situation_name">No situation\'s name!</string>
+    <string name="add_situation_name">Please, write a name of the current situation!</string>
+    <string name="add_location">Please add location</string>
+    <string name="one_atleast">You need at least one marker(location) on the Map in order to exit. Press Ok to add it, or Remove to remove this condition and exit from here</string>
+    <string name="no_save">Are you sure you want to exit without saving the changes?</string>
+    <string name="want_exit_msg">If you exit from this app, your situations will stop too(They will start running when you come back next time). Are you sure you wanna exit?</string>
+
+    <!-- TOASTS -->
+    <string name="marker_removed">Marker removed!</string>
+    <string name="choose_marker">First select a marker!</string>
+
+    <!-- MENU -->
+    <string name="help">Help</string>
+    <string name="dont_save">Don\'t Save</string>
+    <string name="save">Save</string>
+    <string name="exit">Exit</string>
+
+    <!-- CONTEXT MENU -->
+    <string name="rename">Rename</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+
+    <!-- NOTIFICATION -->
+    <string name="active_situations">Active: </string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="delete_button">It deletes the situation.</string>
+    <string name="reorder_button">It changes the priority: Press it, then hold and move the situation up or down.</string>
+    <string name="enable_button">When it is Off, that situation is disabled. Its conditions and settings will be skipped.</string>
+    <string name="priority_desc">The higher situation\'s position, the higher priority. For example: Situation A is above situation B and both have same conditions. Let situation A has Setting Wi-Fi = On, but B has Wi-Fi = Off. If both situations are active Wi-Fi will be On, because situation A is with higher priority than B. </string>
+    <string name="change_priority_ways">Priority can be changed with the button for changing the order or if you long click on the situation and move it</string>
+    <string name="add_location_help">Add new markers/locations.</string>
+    <string name="delete_location_help">Remove markers after they are selected.</string>
+    <string name="radius_help">Change the radius of selected marker.</string>
+    <string name="search_button_help">Search location by address.</string>
+    <string name="map_type_help">Change the type of the map: normal/satellite/hybrid/terrain</string>
+
+    <!-- IMAGE DESCRIPTION -->
+    <string name="icon_edit_description">Icon of the setting or condition</string>
+    <string name="delete_description">Delete situation</string>
+    <string name="icon_description">Dialog icon</string>
+    <string name="image_preview_description">Preview image</string>
+
+    <!-- MANIFEST LABELS -->
+    <string name="app_name">My Assistant </string>
+    <string name="edit_situation_label">SetThings > Edit Situation</string>
+    <string name="settings_bluetooth_label">SetThings > Edit Situation > Bluetooth®</string>
+    <string name="settings_brightness_label">SetThings > Edit Situation > Brightness</string>
+    <string name="settings_ringtone_label">SetThings > Edit Situation > Ringtone</string>
+    <string name="settings_screen_timeout_label">SetThings > Edit Situation > Screen Timeout</string>
+    <string name="settings_volume_label">SetThings > Edit Situation > Volume</string>
+    <string name="settings_wallpaper_label">SetThings > Edit Situation > Wallpaper</string>
+    <string name="settings_wi_fi_label">SetThings > Edit Situation > Wi-Fi</string>
+    <string name="conditions_time_label">SetThings > Edit Situation > Time</string>
+    <string name="conditions_orientation_label">SetThings > Edit Situation > Orientation</string>
+    <string name="conditions_battery_label">SetThings > Edit Situation > Battery</string>
+    <string name="conditions_location_label">SetThings > Edit Situation > Location</string>
+    <string name="conditions_contact_label">SetThings > Edit Situation > Contact</string>
+    <string name="help_activity_label">SetThings > Help</string>
+    <string name="settings_activity_label">SetThings > Settings</string>
+
+</resources>

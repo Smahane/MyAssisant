@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <TextView
+        android:id="@+id/title_situation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_part"
+        android:layout_marginLeft="5dp"
+        android:text="@string/situations"
+        android:textColor="#ccc"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:id="@+id/exchange_button"
+        android:visibility="invisible"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/exchange"
+        android:onClick="onSituationsExchange"
+        android:textOff="@null"
+        android:textOn="@null" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/exchange_button"
+        android:background="@drawable/background" >
+
+        <com.phonesettings.myassistant.DragAndDropListView
+            android:id="@+android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/footer_add_situation"
+            android:background="#ffffff"
+            android:cacheColorHint="#fff"
+            android:clickable="true"
+            android:divider="#ccc"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:fastScrollEnabled="true"
+            android:scrollbars="none"
+            android:choiceMode="singleChoice" />
+
+        <Button
+            android:id="@+id/footer_add_situation"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:onClick="AddNewSituation"
+            android:text="@string/add_situation" />
+    </RelativeLayout>
+
+</RelativeLayout>

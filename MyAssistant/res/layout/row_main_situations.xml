@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:descendantFocusability="beforeDescendants"
+    android:gravity="bottom" >
+    <!-- DO NOT DELETE android:descendantFocusability="beforeDescendants" otherwise the row will be unclickable! -->
+
+    <ToggleButton
+        android:id="@+id/toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:checked="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:onClick="onToggleClick"
+        android:textOff="@string/toggle_off"
+        android:textOn="@string/toggle_on"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@+id/situations_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/delete_image"
+        android:layout_toRightOf="@+id/toggle_button"
+        android:ellipsize="end"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="#000" />
+
+    <ImageView
+        android:id="@+id/delete_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/delete_description"
+        android:onClick="onDeleteSituation"
+        android:padding="4dp"
+        android:src="@drawable/delete" />
+
+</RelativeLayout>
